@@ -1,10 +1,14 @@
-
 import React, { useEffect } from "react";
 // import { FaWhatsapp } from "react-icons/fa";
-import Homes from './Page/Homes/Index'
-import './App.css'
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import Navbar from './Shared/Navbar/Navbar'
+import Homes from "./Page/Homes/Index";
+import "./App.css";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import Navbar from "./Shared/Navbar/Navbar";
 import GlobalPresence from "./Components/GlobalPresence/GlobalPresence";
 import Client from "./Components/Client/Client";
 import Sitemap from "./Components/Sitemap /Sitemap";
@@ -18,8 +22,6 @@ import Card_Detail from "./Components/Card_Detail/Card_Detail";
 import Image_Detail from "./Components/Image_Detail/Image_Detail";
 // import Login from "./Components/Login/Login";
 
-
-
 function ScrollToTop() {
   const location = useLocation();
 
@@ -32,40 +34,27 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <>
-      <ScrollToTop />
+    <div className=" w-full ">
+      {/* <ScrollToTop /> */}
 
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Homes/>} />
-        <Route path="/globalpresence" element={<GlobalPresence/>}/>
-        <Route path="/client" element={<Client/>}/>
-        <Route path="/sitemap" element={<Sitemap/>}/>
-        <Route path="/products" element={<Products/>}/>
-        <Route path="/news_events" element={<News_Events/>}/>
-        <Route path="/application" element={<Application/>}/>
-        <Route path="/contact_us" element={<Contact_Us/>}/>
-        <Route path="/enquiry" element={<Enquiry/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/card_detail" element={<Card_Detail/>}/>
-         <Route path="/image_detail" element={<Image_Detail/>}/>
-
-
-        
-
-
-
-
-
-
-
-
-
-       
-
-
-
-      </Routes>
+     
+        <Navbar />
+ <div  className="w-full h-full   mt-20">
+        <Routes>
+          <Route path="/" element={<Homes />} />
+          <Route path="/globalpresence" element={<GlobalPresence />} />
+          <Route path="/client" element={<Client />} />
+          <Route path="/sitemap" element={<Sitemap />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/news_events" element={<News_Events />} />
+          <Route path="/application" element={<Application />} />
+          <Route path="/contact_us" element={<Contact_Us />} />
+          <Route path="/enquiry" element={<Enquiry />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/card_detail" element={<Card_Detail />} />
+          <Route path="/image_detail" element={<Image_Detail />} />
+        </Routes>
+      </div>
 
       {/* WhatsApp  Button */}
       {/* <a
@@ -76,7 +65,7 @@ function App() {
       >
         <FaWhatsapp size={30} />
       </a> */}
-    </>
+    </div>
   );
 }
 
