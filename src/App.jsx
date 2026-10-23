@@ -37,9 +37,8 @@ function App() {
     <div className=" w-full ">
       {/* <ScrollToTop /> */}
 
-     
-        <Navbar />
- <div  className="w-full h-full   mt-20">
+      <Navbar />
+      <div className="w-full h-full   mt-20">
         <Routes>
           <Route path="/" element={<Homes />} />
           <Route path="/globalpresence" element={<GlobalPresence />} />
